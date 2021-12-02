@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:controls="clr-namespace:XamBooksApp.Controls"
+             x:Class="Design_Singleton.MainPage"
+             NavigationPage.HasNavigationBar="False"
+             NavigationPage.HasBackButton="False">
+    
+
+    <StackLayout>
+        <StackLayout>
+            <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
+                <Label Text="Example Singleton whit Xamarin.Forms!" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
+            </Frame>
+        </StackLayout> 
+        <Label Text="Login" FontSize="Title" HorizontalTextAlignment="Center" Padding="30,10,30,10"/>
+        <StackLayout  HeightRequest="8" />
+        <StackLayout  Margin="16">
+
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+
+                <Frame Padding="0"  CornerRadius="10" BackgroundColor="#E7E7EF"  >
+                    <AbsoluteLayout 
+                        Margin="10,0,0,0"
+                        HorizontalOptions="Start"
+                        VerticalOptions="Center">
+                        <controls:EntryComponent
+                            x:Name="editUsername"  
+                            MinimumWidthRequest="256"
+                            WidthRequest="256"
+                            Placeholder="name"                       
+                        />
+                    </AbsoluteLayout>
+
+                </Frame>
+                <AbsoluteLayout
+                        Margin="0,5,20,0"
+                        HorizontalOptions="End"
+                        VerticalOptions="Center">
+
+                    <Label Text="&#xf0e0;"
+                                    FontFamily="{StaticResource FontAwesomeSolid}" FontSize="16" TextColor="#373737" />
+                </AbsoluteLayout>
+            </Grid>
+
+
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+
+
+                <Frame Padding="0"  CornerRadius="10" BackgroundColor="#E7E7EF"  >
+                    <AbsoluteLayout 
+                        Margin="10,0,0,0"
+                        HorizontalOptions="Start"
+                        VerticalOptions="Center">
+                        <controls:EntryComponent
+                    x:Name="entryPassword"  
+                    Placeholder="passsword"
+                    IsPassword="True"
+                    BackgroundColor="#E7E7EF"  
+                    Padding="16"
+                                />
+                    </AbsoluteLayout>
+                </Frame>
+
+                <AbsoluteLayout
+                        Margin="0,5,20,0"
+                        HorizontalOptions="End"
+                        VerticalOptions="Center">
+
+                    <Label Text="&#xf023;"
+                                    FontFamily="{StaticResource FontAwesomeSolid}" FontSize="16" TextColor="#373737" />
+
+                </AbsoluteLayout>
+            </Grid>
+
+            <StackLayout  HeightRequest="8" />
+            <Button Text="Login" FontSize="16" Background="#2196F3" TextColor="White" CornerRadius="10" Margin="0,30,0,0" Clicked="Button_Clicked"/>
+        </StackLayout>
+
+    </StackLayout>    
+</ContentPage>
